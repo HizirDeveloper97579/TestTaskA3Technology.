@@ -16,7 +16,6 @@
 		FABD638D221459B800DDC34E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD638C221459B800DDC34E /* UserModel.swift */; };
 		FAEE35C222147900001EFC7E /* URL_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE35C122147900001EFC7E /* URL_API.swift */; };
 		FAEE35C422147C1A001EFC7E /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE35C322147C1A001EFC7E /* Typealias.swift */; };
-		FAEE35C722147D9D001EFC7E /* ErrorParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEE35C622147D9D001EFC7E /* ErrorParseJSON.swift */; };
 		FAEF210D221464760029FC23 /* UserDetail.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = FABD638F22145BC600DDC34E /* UserDetail.storyboard */; };
 		FAEF210E2214647B0029FC23 /* Users.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = FABD636F2214512600DDC34E /* Users.storyboard */; };
 		FAEF210F221464800029FC23 /* LaunchScreen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = FABD63742214512A00DDC34E /* LaunchScreen.storyboard */; };
@@ -47,7 +46,6 @@
 		FABD638F22145BC600DDC34E /* UserDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
 		FAEE35C122147900001EFC7E /* URL_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_API.swift; sourceTree = "<group>"; };
 		FAEE35C322147C1A001EFC7E /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
-		FAEE35C622147D9D001EFC7E /* ErrorParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParseJSON.swift; sourceTree = "<group>"; };
 		FAEF2116221469830029FC23 /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		FAEF2118221470DC0029FC23 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		FAEF211A221470F20029FC23 /* ProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyManager.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				FABD636B2214512600DDC34E /* AppDelegate.swift */,
 				FAF19EF42215C1840027DB5E /* StringProject */,
-				FAEE35C522147D7F001EFC7E /* Error */,
 				FAEF2114221469680029FC23 /* IDProject */,
 				FABD638E22145AFE00DDC34E /* Managers */,
 				FABD6389221458E300DDC34E /* Extensions */,
@@ -194,14 +191,6 @@
 				FAF19EF72215D38B0027DB5E /* CacheManager.swift */,
 			);
 			path = Managers;
-			sourceTree = "<group>";
-		};
-		FAEE35C522147D7F001EFC7E /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				FAEE35C622147D9D001EFC7E /* ErrorParseJSON.swift */,
-			);
-			path = Error;
 			sourceTree = "<group>";
 		};
 		FAEF2114221469680029FC23 /* IDProject */ = {
@@ -311,7 +300,6 @@
 				FABD638B2214590400DDC34E /* Extension + UIView.swift in Sources */,
 				FAF19EF62215C1A60027DB5E /* StringProject.swift in Sources */,
 				FAF19EEF2215A87A0027DB5E /* PhotoLoadManager.swift in Sources */,
-				FAEE35C722147D9D001EFC7E /* ErrorParseJSON.swift in Sources */,
 				FAEE35C422147C1A001EFC7E /* Typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
