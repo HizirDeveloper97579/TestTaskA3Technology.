@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA941EE822161AAD00CA6408 /* JSONParseble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EE722161AAD00CA6408 /* JSONParseble.swift */; };
+		FA941EEB22161BA300CA6408 /* ParseJSONUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EEA22161BA300CA6408 /* ParseJSONUsers.swift */; };
+		FA941EED221627B300CA6408 /* ParseJSONPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EEC221627B300CA6408 /* ParseJSONPhoto.swift */; };
+		FA941EEF221627F800CA6408 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EEE221627F800CA6408 /* ParseJSON.swift */; };
 		FABD636C2214512600DDC34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD636B2214512600DDC34E /* AppDelegate.swift */; };
 		FABD636E2214512600DDC34E /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD636D2214512600DDC34E /* UsersViewController.swift */; };
 		FABD63732214512A00DDC34E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABD63722214512A00DDC34E /* Assets.xcassets */; };
@@ -20,7 +24,6 @@
 		FAEF210E2214647B0029FC23 /* Users.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = FABD636F2214512600DDC34E /* Users.storyboard */; };
 		FAEF210F221464800029FC23 /* LaunchScreen.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = FABD63742214512A00DDC34E /* LaunchScreen.storyboard */; };
 		FAEF2117221469830029FC23 /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF2116221469830029FC23 /* ID.swift */; };
-		FAEF2119221470DC0029FC23 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF2118221470DC0029FC23 /* JSONManager.swift */; };
 		FAEF211B221470F20029FC23 /* ProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEF211A221470F20029FC23 /* ProxyManager.swift */; };
 		FAF19EE422156C180027DB5E /* UserDetaiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EE322156C180027DB5E /* UserDetaiCollectionViewCell.swift */; };
 		FAF19EED2215A7520027DB5E /* Extension + ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EEC2215A7520027DB5E /* Extension + ActivityIndicator.swift */; };
@@ -32,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA941EE722161AAD00CA6408 /* JSONParseble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParseble.swift; sourceTree = "<group>"; };
+		FA941EEA22161BA300CA6408 /* ParseJSONUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONUsers.swift; sourceTree = "<group>"; };
+		FA941EEC221627B300CA6408 /* ParseJSONPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONPhoto.swift; sourceTree = "<group>"; };
+		FA941EEE221627F800CA6408 /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
 		FABD63682214512600DDC34E /* TestTaskA3Technology..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskA3Technology..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABD636B2214512600DDC34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABD636D2214512600DDC34E /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +54,6 @@
 		FAEE35C122147900001EFC7E /* URL_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL_API.swift; sourceTree = "<group>"; };
 		FAEE35C322147C1A001EFC7E /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		FAEF2116221469830029FC23 /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
-		FAEF2118221470DC0029FC23 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
 		FAEF211A221470F20029FC23 /* ProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyManager.swift; sourceTree = "<group>"; };
 		FAF19EE322156C180027DB5E /* UserDetaiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetaiCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAF19EEC2215A7520027DB5E /* Extension + ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ActivityIndicator.swift"; sourceTree = "<group>"; };
@@ -69,6 +75,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA941EE622161A3600CA6408 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA941EE722161AAD00CA6408 /* JSONParseble.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA941EE922161B5500CA6408 /* Typealiase */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE35C322147C1A001EFC7E /* Typealias.swift */,
+			);
+			path = Typealiase;
+			sourceTree = "<group>";
+		};
+		FA941EF2221628B200CA6408 /* ParseJSONClasses */ = {
+			isa = PBXGroup;
+			children = (
+				FA941EEA22161BA300CA6408 /* ParseJSONUsers.swift */,
+				FA941EEC221627B300CA6408 /* ParseJSONPhoto.swift */,
+				FA941EEE221627F800CA6408 /* ParseJSON.swift */,
+			);
+			path = ParseJSONClasses;
+			sourceTree = "<group>";
+		};
 		FABD635F2214512600DDC34E = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +121,12 @@
 			isa = PBXGroup;
 			children = (
 				FABD636B2214512600DDC34E /* AppDelegate.swift */,
+				FA941EF2221628B200CA6408 /* ParseJSONClasses */,
+				FABD638E22145AFE00DDC34E /* Managers */,
+				FA941EE922161B5500CA6408 /* Typealiase */,
+				FA941EE622161A3600CA6408 /* Protocols */,
 				FAF19EF42215C1840027DB5E /* StringProject */,
 				FAEF2114221469680029FC23 /* IDProject */,
-				FABD638E22145AFE00DDC34E /* Managers */,
 				FABD6389221458E300DDC34E /* Extensions */,
 				FABD637E2214543000DDC34E /* Users */,
 				FABD637D2214540700DDC34E /* UserDetail */,
@@ -184,7 +219,6 @@
 		FABD638E22145AFE00DDC34E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				FAEF2118221470DC0029FC23 /* JSONManager.swift */,
 				FAF19EEE2215A87A0027DB5E /* PhotoLoadManager.swift */,
 				FAEF211A221470F20029FC23 /* ProxyManager.swift */,
 				FAF19EF22215B3410027DB5E /* NetworkManager.swift */,
@@ -198,7 +232,6 @@
 			children = (
 				FAEF2116221469830029FC23 /* ID.swift */,
 				FAEE35C122147900001EFC7E /* URL_API.swift */,
-				FAEE35C322147C1A001EFC7E /* Typealias.swift */,
 			);
 			path = IDProject;
 			sourceTree = "<group>";
@@ -280,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA941EEB22161BA300CA6408 /* ParseJSONUsers.swift in Sources */,
 				FAEF211B221470F20029FC23 /* ProxyManager.swift in Sources */,
+				FA941EE822161AAD00CA6408 /* JSONParseble.swift in Sources */,
 				FAEF2117221469830029FC23 /* ID.swift in Sources */,
 				FAF19EE422156C180027DB5E /* UserDetaiCollectionViewCell.swift in Sources */,
 				FAEF210F221464800029FC23 /* LaunchScreen.storyboard in Sources */,
@@ -290,8 +325,8 @@
 				FABD636E2214512600DDC34E /* UsersViewController.swift in Sources */,
 				FAEE35C222147900001EFC7E /* URL_API.swift in Sources */,
 				FAF19EF82215D38B0027DB5E /* CacheManager.swift in Sources */,
-				FAEF2119221470DC0029FC23 /* JSONManager.swift in Sources */,
 				FAF19EF32215B3410027DB5E /* NetworkManager.swift in Sources */,
+				FA941EED221627B300CA6408 /* ParseJSONPhoto.swift in Sources */,
 				FABD636C2214512600DDC34E /* AppDelegate.swift in Sources */,
 				FABD63862214548900DDC34E /* UserDetailViewController.swift in Sources */,
 				FABD638D221459B800DDC34E /* UserModel.swift in Sources */,
@@ -301,6 +336,7 @@
 				FAF19EF62215C1A60027DB5E /* StringProject.swift in Sources */,
 				FAF19EEF2215A87A0027DB5E /* PhotoLoadManager.swift in Sources */,
 				FAEE35C422147C1A001EFC7E /* Typealias.swift in Sources */,
+				FA941EEF221627F800CA6408 /* ParseJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

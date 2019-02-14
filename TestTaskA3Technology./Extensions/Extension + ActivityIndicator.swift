@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIActivityIndicatorView {
-	
+	//работа активити индикатора
 	func activityIndicator(on: Bool){
 		isHidden = !on
 		if !on {

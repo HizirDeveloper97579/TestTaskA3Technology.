@@ -11,6 +11,7 @@ import UIKit
 class UsersViewController: UIViewController {
 //MARK: --- VARIBELS
 	private var arrayUser = [User]()
+	let parseUser = ParseJSONUsers()
 //MARK: --- OUTLETS
 	@IBOutlet weak var userTableView    : UITableView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -27,12 +28,20 @@ class UsersViewController: UIViewController {
 	}
 //MARK: --- FUNCTIONS
 	private func settingSelfController(){
-	
-		JSONManager.shared.parseUsers() { [unowned self] (users) in
-			self.arrayUser = users
+		
+		let jsonParse = ParseJSON(parseJSON: parseUser)
+		
+		jsonParse.parseJSON(url: URL_API.users.rawValue, id: nil) {(users) in
+			self.arrayUser = users as! [User]
 			self.activityIndicator.activityIndicator(on: false)
 			self.userTableView.reloadData()
 		}
+		
+//		JSONManager.shared.parseUsers() { [unowned self] (users) in
+//			self.arrayUser = users
+//			self.activityIndicator.activityIndicator(on: false)
+//			self.userTableView.reloadData()
+//		}
 	}
 //MARK: --- SEGUES
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

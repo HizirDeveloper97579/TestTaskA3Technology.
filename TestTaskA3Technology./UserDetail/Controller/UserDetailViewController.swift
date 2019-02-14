@@ -12,7 +12,8 @@ class UserDetailViewController: UIViewController {
 	//MARK: --- VARIBELS
 	public var curenUser   : User!
 	private var userPhotos = [Photo]()
-	
+	let parsePhoto = ParseJSONPhotos()
+	//MARK: --- OUTLETS
 	@IBOutlet weak var userDetailCollectionView: UICollectionView!
 	//MARK: --- LOAD
 	override func viewDidLoad() {
@@ -21,11 +22,10 @@ class UserDetailViewController: UIViewController {
 	}
 	//MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		JSONManager.shared.parsePhotos(id: curenUser.id) { [unowned self] (photos) in
-			DispatchQueue.main.async {
-				self.userPhotos = photos
-				self.userDetailCollectionView.reloadData()
-			}
+		let jsonParse = ParseJSON(parseJSON: parsePhoto)
+		jsonParse.parseJSON(url: URL_API.photo.rawValue, id: curenUser.id) { (photos) in
+			self.userPhotos = photos as! [Photo]
+			self.userDetailCollectionView.reloadData()
 		}
 	}
 }

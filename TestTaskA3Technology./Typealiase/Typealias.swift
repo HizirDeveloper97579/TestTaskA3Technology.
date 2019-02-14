@@ -6,7 +6,6 @@
 //  Copyright © 2019 GurobaDeveloper. All rights reserved.
 //
 
-import Foundation
 
-typealias ClousureProxy = (Data, URLResponse, Error) -> Void
 typealias Clousure<T>   = (T) -> Void
+
