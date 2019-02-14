@@ -29,9 +29,9 @@ class UsersViewController: UIViewController {
 //MARK: --- FUNCTIONS
 	private func settingSelfController(){
 		
-		let jsonParse = ParseJSON(parseJSON: parseUser)
+		let parseJSON = ParseJSON(parseJSON: parseUser)
 		
-		jsonParse.parseJSON(url: URL_API.users.rawValue, id: nil) {(users) in
+		parseJSON.parseJSON(url: URL_API.users.rawValue, id: nil) {(users) in
 			self.arrayUser = users as! [User]
 			self.activityIndicator.activityIndicator(on: false)
 			self.userTableView.reloadData()

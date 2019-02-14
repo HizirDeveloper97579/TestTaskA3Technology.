@@ -22,8 +22,8 @@ class UserDetailViewController: UIViewController {
 	}
 	//MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		let jsonParse = ParseJSON(parseJSON: parsePhoto)
-		jsonParse.parseJSON(url: URL_API.photo.rawValue, id: curenUser.id) { (photos) in
+		let parseJSON = ParseJSON(parseJSON: parsePhoto)
+		parseJSON.parseJSON(url: URL_API.photo.rawValue, id: curenUser.id) { (photos) in
 			self.userPhotos = photos as! [Photo]
 			self.userDetailCollectionView.reloadData()
 		}
