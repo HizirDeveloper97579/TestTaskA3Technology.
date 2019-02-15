@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA941EE822161AAD00CA6408 /* JSONParseble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EE722161AAD00CA6408 /* JSONParseble.swift */; };
-		FA941EEB22161BA300CA6408 /* ParseJSONUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EEA22161BA300CA6408 /* ParseJSONUsers.swift */; };
-		FA941EED221627B300CA6408 /* ParseJSONPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EEC221627B300CA6408 /* ParseJSONPhoto.swift */; };
 		FA941EEF221627F800CA6408 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA941EEE221627F800CA6408 /* ParseJSON.swift */; };
 		FABD636C2214512600DDC34E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD636B2214512600DDC34E /* AppDelegate.swift */; };
 		FABD636E2214512600DDC34E /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD636D2214512600DDC34E /* UsersViewController.swift */; };
@@ -36,8 +34,6 @@
 
 /* Begin PBXFileReference section */
 		FA941EE722161AAD00CA6408 /* JSONParseble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParseble.swift; sourceTree = "<group>"; };
-		FA941EEA22161BA300CA6408 /* ParseJSONUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONUsers.swift; sourceTree = "<group>"; };
-		FA941EEC221627B300CA6408 /* ParseJSONPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSONPhoto.swift; sourceTree = "<group>"; };
 		FA941EEE221627F800CA6408 /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
 		FABD63682214512600DDC34E /* TestTaskA3Technology..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTaskA3Technology..app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABD636B2214512600DDC34E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +90,6 @@
 		FA941EF2221628B200CA6408 /* ParseJSONClasses */ = {
 			isa = PBXGroup;
 			children = (
-				FA941EEA22161BA300CA6408 /* ParseJSONUsers.swift */,
-				FA941EEC221627B300CA6408 /* ParseJSONPhoto.swift */,
 				FA941EEE221627F800CA6408 /* ParseJSON.swift */,
 			);
 			path = ParseJSONClasses;
@@ -313,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA941EEB22161BA300CA6408 /* ParseJSONUsers.swift in Sources */,
 				FAEF211B221470F20029FC23 /* ProxyManager.swift in Sources */,
 				FA941EE822161AAD00CA6408 /* JSONParseble.swift in Sources */,
 				FAEF2117221469830029FC23 /* ID.swift in Sources */,
@@ -326,7 +319,6 @@
 				FAEE35C222147900001EFC7E /* URL_API.swift in Sources */,
 				FAF19EF82215D38B0027DB5E /* CacheManager.swift in Sources */,
 				FAF19EF32215B3410027DB5E /* NetworkManager.swift in Sources */,
-				FA941EED221627B300CA6408 /* ParseJSONPhoto.swift in Sources */,
 				FABD636C2214512600DDC34E /* AppDelegate.swift in Sources */,
 				FABD63862214548900DDC34E /* UserDetailViewController.swift in Sources */,
 				FABD638D221459B800DDC34E /* UserModel.swift in Sources */,

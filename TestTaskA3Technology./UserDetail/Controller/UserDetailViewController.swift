@@ -12,7 +12,7 @@ class UserDetailViewController: UIViewController {
 	//MARK: --- VARIBELS
 	public var curenUser   : User!
 	private var userPhotos = [Photo]()
-	private let parseJSON = ParseJSON(parseJSON: ParseJSONPhotos())
+	private let parseJSONPhoto = ParseJSON<Photo>()
 	
 	//MARK: --- OUTLETS
 	@IBOutlet weak var userDetailCollectionView: UICollectionView!
@@ -24,8 +24,8 @@ class UserDetailViewController: UIViewController {
 	}
 	//MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		
-		parseJSON.parseJSON(url: URL_API.photo.rawValue) { [unowned self] (photos) in
+	
+		parseJSONPhoto.parseJSON(url: URL_API.photo.rawValue) { [unowned self] (photos) in
 			self.userPhotos = (photos as! [Photo]).filter({ $0.albumId == self.curenUser.id })
 			self.userDetailCollectionView.reloadData()
 		}

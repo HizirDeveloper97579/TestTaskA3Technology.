@@ -9,7 +9,7 @@
 import UIKit
 
 //модель User для JSON
-struct User: Decodable {
+class User: Decodable {
 	
 	var id  : Double?
 	var name: String?

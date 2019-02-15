@@ -8,17 +8,18 @@
 
 import UIKit
 
-class ParseJSON: JSONParseble {
+class ParseJSON<T: Decodable>: JSONParseble {
 	
-	var delegate: JSONParseble!
-	
-	func parseJSON(url: String, complition: @escaping Clousure<Decodable>){
-		delegate.parseJSON(url: url) { (json) in
-			complition(json)
+	func parseJSON(url: String, complition: @escaping Clousure<Decodable>) {
+		parse(urlString: url) {(data) in
+			do{
+				let getUsers = try JSONDecoder().decode([T].self, from: data)
+				DispatchQueue.main.async {
+					complition(getUsers)
+				}
+			} catch let error {
+				print(error.localizedDescription)
+			}
 		}
-	}
-	
-	init(parseJSON: JSONParseble) {
-		self.delegate = parseJSON
 	}
 }

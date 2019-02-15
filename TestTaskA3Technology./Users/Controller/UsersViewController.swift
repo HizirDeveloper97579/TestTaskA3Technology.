@@ -11,8 +11,7 @@ import UIKit
 class UsersViewController: UIViewController {
 //MARK: --- VARIBELS
 	private var arrayUser = [User]()
-	private let parseJSON = ParseJSON(parseJSON: ParseJSONUsers())
-	
+	private let parseJSONUser = ParseJSON<User>()
 //MARK: --- OUTLETS
 	@IBOutlet weak var userTableView    : UITableView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -29,8 +28,8 @@ class UsersViewController: UIViewController {
 	}
 //MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		
-		parseJSON.parseJSON(url: URL_API.users.rawValue) {(users) in
+
+		parseJSONUser.parseJSON(url: URL_API.users.rawValue) { (users) in
 			self.arrayUser = users as! [User]
 			self.activityIndicator.show(on: false)
 			self.userTableView.reloadData()
