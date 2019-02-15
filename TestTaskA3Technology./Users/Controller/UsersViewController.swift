@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TestTaskA3Technology.
 //
-//  Created by -=АДАМ=- on 13/02/2019.
+//  Created by -=HIZIR=- on 13/02/2019.
 //  Copyright © 2019 GurobaDeveloper. All rights reserved.
 //
 
@@ -11,7 +11,7 @@ import UIKit
 class UsersViewController: UIViewController {
 //MARK: --- VARIBELS
 	private var arrayUser = [User]()
-	let parseUser = ParseJSONUsers()
+	
 //MARK: --- OUTLETS
 	@IBOutlet weak var userTableView    : UITableView!
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -19,7 +19,7 @@ class UsersViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		//проверка интернета
-		activityIndicator.activityIndicator(on: true)
+		activityIndicator.show(on: true)
 		if !Reachability.shared.isConnectedToNetwork() {
 		 	Reachability.shared.alertVC(vc: self)
 		} else {
@@ -29,19 +29,13 @@ class UsersViewController: UIViewController {
 //MARK: --- FUNCTIONS
 	private func settingSelfController(){
 		
-		let parseJSON = ParseJSON(parseJSON: parseUser)
+		let parseJSON = ParseJSON(parseJSON: ParseJSONUsers())
 		
-		parseJSON.parseJSON(url: URL_API.users.rawValue, id: nil) {(users) in
+		parseJSON.parseJSON(url: URL_API.users.rawValue) {(users) in
 			self.arrayUser = users as! [User]
-			self.activityIndicator.activityIndicator(on: false)
+			self.activityIndicator.show(on: false)
 			self.userTableView.reloadData()
 		}
-		
-//		JSONManager.shared.parseUsers() { [unowned self] (users) in
-//			self.arrayUser = users
-//			self.activityIndicator.activityIndicator(on: false)
-//			self.userTableView.reloadData()
-//		}
 	}
 //MARK: --- SEGUES
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

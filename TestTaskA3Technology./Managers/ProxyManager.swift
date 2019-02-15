@@ -2,7 +2,7 @@
 //  ProxyManager.swift
 //  TestTaskA3Technology.
 //
-//  Created by -=АДАМ=- on 13/02/2019.
+//  Created by -=HIZIR=- on 13/02/2019.
 //  Copyright © 2019 GurobaDeveloper. All rights reserved.
 //
 
@@ -14,14 +14,14 @@ final class ProxyManager {
 	private init(){}
 	
 	func proxy(url: String?, comlition: @escaping Clousure<UIImage>){
-		if let imageGet = CacheManager.shared.getData(stringKey: url) {
+		if let imageGet = CacheManager.shared.get(stringKey: url) {
 			DispatchQueue.main.async {
 				comlition(imageGet)
 			}
 		} else {
 		
 		PhotoLoadManager.shared.loadPhotoURL(url: url) {(image) in
-			CacheManager.shared.saveData(stringKey: url, image: image)
+			CacheManager.shared.save(stringKey: url, image: image)
 			DispatchQueue.main.async {
 			comlition(image)
 			}

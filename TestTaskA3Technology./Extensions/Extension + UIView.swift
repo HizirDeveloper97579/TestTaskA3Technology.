@@ -2,7 +2,7 @@
 //  Extension + UITableViewCell.swift
 //  TestTaskA3Technology.
 //
-//  Created by -=АДАМ=- on 13/02/2019.
+//  Created by -=HIZIR=- on 13/02/2019.
 //  Copyright © 2019 GurobaDeveloper. All rights reserved.
 //
 

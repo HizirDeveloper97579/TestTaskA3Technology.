@@ -37,7 +37,7 @@ final class Reachability {
 	}
 	//алерт предупреждение если нет интернета
 	func alertVC(vc: UIViewController){
-		let alert = UIAlertController(title: StringProject.alertNotNetwork.rawValue, message: nil, preferredStyle: .alert)
+		let alert = UIAlertController(title: ProjectStrings.alertNotNetwork.rawValue, message: nil, preferredStyle: .alert)
 		vc.present(alert, animated: true) {
 			DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
 				alert.dismiss(animated: true)

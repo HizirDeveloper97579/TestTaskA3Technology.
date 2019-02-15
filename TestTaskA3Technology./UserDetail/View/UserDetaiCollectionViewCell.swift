@@ -20,13 +20,14 @@ class UserDetaiCollectionViewCell: UICollectionViewCell {
 			tittleLabel.text = photo?.title
 			ProxyManager.shared.proxy(url: photo?.url) { [unowned self] (image) in
 				self.photoImageView.image = image
-				self.activityLoadPhoto.activityIndicator(on: false)
+				self.activityLoadPhoto.show(on: false)
 			}
 		}
 	}
 	
 	override func awakeFromNib() {
-		activityLoadPhoto.activityIndicator(on: true)
+		super.awakeFromNib()
+		activityLoadPhoto.show(on: true)
 		photoImageView.addShadowAndRoundedCorners()
 		viewImageView.addShadowAndRoundedCorners()
 	}

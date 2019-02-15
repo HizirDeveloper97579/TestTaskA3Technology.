@@ -7,5 +7,5 @@
 //
 
 
-typealias Clousure<T>   = (T) -> Void
+typealias Clousure<T> = (T) -> Void
 

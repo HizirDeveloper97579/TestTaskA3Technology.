@@ -29,7 +29,7 @@
 		FAF19EED2215A7520027DB5E /* Extension + ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EEC2215A7520027DB5E /* Extension + ActivityIndicator.swift */; };
 		FAF19EEF2215A87A0027DB5E /* PhotoLoadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EEE2215A87A0027DB5E /* PhotoLoadManager.swift */; };
 		FAF19EF32215B3410027DB5E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EF22215B3410027DB5E /* NetworkManager.swift */; };
-		FAF19EF62215C1A60027DB5E /* StringProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EF52215C1A60027DB5E /* StringProject.swift */; };
+		FAF19EF62215C1A60027DB5E /* ProjectStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EF52215C1A60027DB5E /* ProjectStrings.swift */; };
 		FAF19EF82215D38B0027DB5E /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF19EF72215D38B0027DB5E /* CacheManager.swift */; };
 		FAF289972214C983007C1200 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF289962214C983007C1200 /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +59,7 @@
 		FAF19EEC2215A7520027DB5E /* Extension + ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ActivityIndicator.swift"; sourceTree = "<group>"; };
 		FAF19EEE2215A87A0027DB5E /* PhotoLoadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoadManager.swift; sourceTree = "<group>"; };
 		FAF19EF22215B3410027DB5E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		FAF19EF52215C1A60027DB5E /* StringProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringProject.swift; sourceTree = "<group>"; };
+		FAF19EF52215C1A60027DB5E /* ProjectStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStrings.swift; sourceTree = "<group>"; };
 		FAF19EF72215D38B0027DB5E /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		FAF289962214C983007C1200 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,7 +125,7 @@
 				FABD638E22145AFE00DDC34E /* Managers */,
 				FA941EE922161B5500CA6408 /* Typealiase */,
 				FA941EE622161A3600CA6408 /* Protocols */,
-				FAF19EF42215C1840027DB5E /* StringProject */,
+				FAF19EF42215C1840027DB5E /* ProjectStrings */,
 				FAEF2114221469680029FC23 /* IDProject */,
 				FABD6389221458E300DDC34E /* Extensions */,
 				FABD637E2214543000DDC34E /* Users */,
@@ -236,12 +236,12 @@
 			path = IDProject;
 			sourceTree = "<group>";
 		};
-		FAF19EF42215C1840027DB5E /* StringProject */ = {
+		FAF19EF42215C1840027DB5E /* ProjectStrings */ = {
 			isa = PBXGroup;
 			children = (
-				FAF19EF52215C1A60027DB5E /* StringProject.swift */,
+				FAF19EF52215C1A60027DB5E /* ProjectStrings.swift */,
 			);
-			name = StringProject;
+			name = ProjectStrings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +333,7 @@
 				FAF289972214C983007C1200 /* PhotoModel.swift in Sources */,
 				FAF19EED2215A7520027DB5E /* Extension + ActivityIndicator.swift in Sources */,
 				FABD638B2214590400DDC34E /* Extension + UIView.swift in Sources */,
-				FAF19EF62215C1A60027DB5E /* StringProject.swift in Sources */,
+				FAF19EF62215C1A60027DB5E /* ProjectStrings.swift in Sources */,
 				FAF19EEF2215A87A0027DB5E /* PhotoLoadManager.swift in Sources */,
 				FAEE35C422147C1A001EFC7E /* Typealias.swift in Sources */,
 				FA941EEF221627F800CA6408 /* ParseJSON.swift in Sources */,

@@ -10,12 +10,10 @@ import UIKit
 
 class ParseJSONPhotos: JSONParseble {
 	
-	typealias SelfReturn = [Photo]
-	
-	func parseJSON(url: String, id: Double?, complition: @escaping Clousure<Decodable>) {
+	func parseJSON(url: String, complition: @escaping Clousure<Decodable>) {
 		parse(urlString: url) {(data) in
 			do{
-				let getPhotos = try JSONDecoder().decode([Photo].self, from: data).filter({ $0.albumId == id})
+				let getPhotos = try JSONDecoder().decode([Photo].self, from: data)
 				DispatchQueue.main.async {
 					complition(getPhotos)
 				}

@@ -15,12 +15,12 @@ final class CacheManager {
 	
 	let cache = NSCache<NSString, UIImage>()
 	
-	func saveData(stringKey: String?, image: UIImage){
+	func save(stringKey: String?, image: UIImage){
 		guard let key = stringKey as NSString? else { return }
 		cache.setObject(image, forKey: key)
 	}
 	
-	func getData(stringKey: String?) -> UIImage? {
+	func get(stringKey: String?) -> UIImage? {
 		guard let key = stringKey as NSString? else { return nil }
 		if let image = cache.object(forKey: key) {
 			return image

@@ -2,7 +2,7 @@
 //  UserDetailViewController.swift
 //  TestTaskA3Technology.
 //
-//  Created by -=АДАМ=- on 13/02/2019.
+//  Created by -=HIZIR=- on 13/02/2019.
 //  Copyright © 2019 GurobaDeveloper. All rights reserved.
 //
 
@@ -12,9 +12,10 @@ class UserDetailViewController: UIViewController {
 	//MARK: --- VARIBELS
 	public var curenUser   : User!
 	private var userPhotos = [Photo]()
-	let parsePhoto = ParseJSONPhotos()
+	
 	//MARK: --- OUTLETS
 	@IBOutlet weak var userDetailCollectionView: UICollectionView!
+	
 	//MARK: --- LOAD
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -22,9 +23,9 @@ class UserDetailViewController: UIViewController {
 	}
 	//MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		let parseJSON = ParseJSON(parseJSON: parsePhoto)
-		parseJSON.parseJSON(url: URL_API.photo.rawValue, id: curenUser.id) { (photos) in
-			self.userPhotos = photos as! [Photo]
+		let parseJSON = ParseJSON(parseJSON: ParseJSONPhotos())
+		parseJSON.parseJSON(url: URL_API.photo.rawValue) { [unowned self] (photos) in
+			self.userPhotos = (photos as! [Photo]).filter({ $0.albumId == self.curenUser.id })
 			self.userDetailCollectionView.reloadData()
 		}
 	}
@@ -56,5 +57,5 @@ extension UserDetailViewController:  UICollectionViewDelegateFlowLayout {
 		return CGSize(width: width, height: height)
 	}
 }
-//MARK: --- END -----------------------------------------------------------
+//MARK: --- END
 

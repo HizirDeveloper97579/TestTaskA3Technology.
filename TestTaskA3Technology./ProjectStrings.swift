@@ -1,5 +1,5 @@
 //
-//  StringProject.swift
+//  ProjectStringsswift
 //  TestTaskA3Technology.
 //
 //  Created by -=HIZIR=- on 14/02/2019.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-enum StringProject: String {
+enum ProjectStrings: String {
+	//alert text
 	case alertNotNetwork = "У Вас нет подключения к интернету , подключитe устройство и попробуйте снова"
 }

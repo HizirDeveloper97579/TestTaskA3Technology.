@@ -25,7 +25,7 @@ final class PhotoLoadManager {
 			
 		complition(image)
 		}
-		dataTask.resume()
+	dataTask.resume()
 	}
 	private init(){}
 }

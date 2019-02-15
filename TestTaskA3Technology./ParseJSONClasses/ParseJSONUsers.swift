@@ -11,7 +11,7 @@ import UIKit
 class ParseJSONUsers: JSONParseble {
 	
 	
-	func parseJSON(url: String, id: Double?, complition: @escaping Clousure<Decodable>) {
+	func parseJSON(url: String, complition: @escaping Clousure<Decodable>) {
 		parse(urlString: url) {(data) in
 			do{
 				let getUsers = try JSONDecoder().decode([User].self, from: data)

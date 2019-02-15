@@ -12,8 +12,8 @@ class ParseJSON: JSONParseble {
 	
 	var delegate: JSONParseble!
 	
-	func parseJSON(url: String, id: Double?, complition: @escaping Clousure<Decodable>){
-		delegate.parseJSON(url: url, id: id) { (json) in
+	func parseJSON(url: String, complition: @escaping Clousure<Decodable>){
+		delegate.parseJSON(url: url) { (json) in
 			complition(json)
 		}
 	}
