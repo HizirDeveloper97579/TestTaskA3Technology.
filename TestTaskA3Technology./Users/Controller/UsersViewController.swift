@@ -11,6 +11,7 @@ import UIKit
 class UsersViewController: UIViewController {
 //MARK: --- VARIBELS
 	private var arrayUser = [User]()
+	private let parseJSON = ParseJSON(parseJSON: ParseJSONUsers())
 	
 //MARK: --- OUTLETS
 	@IBOutlet weak var userTableView    : UITableView!
@@ -28,8 +29,6 @@ class UsersViewController: UIViewController {
 	}
 //MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		
-		let parseJSON = ParseJSON(parseJSON: ParseJSONUsers())
 		
 		parseJSON.parseJSON(url: URL_API.users.rawValue) {(users) in
 			self.arrayUser = users as! [User]

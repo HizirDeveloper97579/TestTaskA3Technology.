@@ -12,6 +12,7 @@ class UserDetailViewController: UIViewController {
 	//MARK: --- VARIBELS
 	public var curenUser   : User!
 	private var userPhotos = [Photo]()
+	private let parseJSON = ParseJSON(parseJSON: ParseJSONPhotos())
 	
 	//MARK: --- OUTLETS
 	@IBOutlet weak var userDetailCollectionView: UICollectionView!
@@ -23,7 +24,7 @@ class UserDetailViewController: UIViewController {
 	}
 	//MARK: --- FUNCTIONS
 	private func settingSelfController(){
-		let parseJSON = ParseJSON(parseJSON: ParseJSONPhotos())
+		
 		parseJSON.parseJSON(url: URL_API.photo.rawValue) { [unowned self] (photos) in
 			self.userPhotos = (photos as! [Photo]).filter({ $0.albumId == self.curenUser.id })
 			self.userDetailCollectionView.reloadData()
@@ -57,5 +58,4 @@ extension UserDetailViewController:  UICollectionViewDelegateFlowLayout {
 		return CGSize(width: width, height: height)
 	}
 }
-//MARK: --- END
 

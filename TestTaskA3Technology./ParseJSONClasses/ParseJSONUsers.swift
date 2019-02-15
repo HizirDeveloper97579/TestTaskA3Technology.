@@ -10,7 +10,6 @@ import UIKit
 
 class ParseJSONUsers: JSONParseble {
 	
-	
 	func parseJSON(url: String, complition: @escaping Clousure<Decodable>) {
 		parse(urlString: url) {(data) in
 			do{
@@ -23,5 +22,4 @@ class ParseJSONUsers: JSONParseble {
 			}
 		}
 	}
-	
 }
