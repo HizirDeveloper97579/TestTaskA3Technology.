@@ -8,12 +8,13 @@
 
 import UIKit
 
-final class PhotoLoadManager {
+final class PhotoLoad: Proxyble {
 	
-	static let shared = PhotoLoadManager()
+	typealias ReturnTypeClousure = UIImage
 	
-	func loadPhotoURL(url: String?, complition: @escaping Clousure<UIImage>){
-		guard let urlString = url else { return }
+	func loadImage(urlString: String?, complition: @escaping Clousure<UIImage>){
+		
+		guard let urlString = urlString else { return }
 		guard let URL = URL(string: urlString) else { return }
 		
 		let request  = URLRequest(url: URL, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 10)
@@ -27,5 +28,4 @@ final class PhotoLoadManager {
 		}
 	dataTask.resume()
 	}
-	private init(){}
 }

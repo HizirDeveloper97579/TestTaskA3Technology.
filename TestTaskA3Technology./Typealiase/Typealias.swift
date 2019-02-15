@@ -6,6 +6,7 @@
 //  Copyright © 2019 GurobaDeveloper. All rights reserved.
 //
 
+import UIKit
 
-typealias Clousure<T> = (T) -> Void
-
+typealias Clousure<T>   = (T) -> Void
+typealias ClousureProxy = (Data?, URLResponse?, Error?) -> ()
