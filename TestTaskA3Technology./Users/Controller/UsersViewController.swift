@@ -28,7 +28,7 @@ class UsersViewController: UIViewController {
 	}
 //MARK: --- FUNCTIONS
 	private func settingSelfController(){
-
+		//parse JSON user
 		parseJSONUser.parseJSON(url: URL_API.users.rawValue) { (users) in
 			self.arrayUser = users as! [User]
 			self.activityIndicator.show(on: false)
