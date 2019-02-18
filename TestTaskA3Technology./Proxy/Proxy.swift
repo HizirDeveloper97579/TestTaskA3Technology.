@@ -11,9 +11,10 @@ import UIKit
 final class Proxy: Proxyble {
 	
 	let loadObject: Proxyble!
+	let cache: CacheManager<UIImage>!
 	
 	func loadImage(urlString: String?, complition: @escaping Clousure<UIImage>) {
-		if let getImage = CacheManager.shared.get(stringKey: urlString) {
+		if let getImage = cache.get(stringKey: urlString) {
 			DispatchQueue.main.async {
 				complition(getImage)
 			}
@@ -25,7 +26,9 @@ final class Proxy: Proxyble {
 		}
 		}
 	}
-	init(loadObject: Proxyble) {
+	
+	init(loadObject: Proxyble, cache: CacheManager<UIImage>) {
 		self.loadObject = loadObject
+		self.cache = cache
 	}
 }

@@ -8,25 +8,25 @@
 
 import UIKit
 
-final class CacheManager {
+final class CacheManager<T: NSObject>{
 	
-	static let shared = CacheManager()
-	private init(){}
+	let cache = NSCache<NSString, T>()
 	
-	let cache = NSCache<NSString, UIImage>()
-	
-	func save(stringKey: String?, image: UIImage){
+	func save(stringKey: String?, cacheObj: T){
 		guard let key = stringKey as NSString? else { return }
-		cache.setObject(image, forKey: key)
+		cache.setObject(cacheObj, forKey: key)
 	}
 	
-	func get(stringKey: String?) -> UIImage? {
+	func get(stringKey: String?) -> T? {
 		guard let key = stringKey as NSString? else { return nil }
-		if let image = cache.object(forKey: key) {
-			return image
+		if let cacheObj = cache.object(forKey: key) {
+			return cacheObj
 		} else {
 			return nil
 		}
+	}
+	init(){
+		
 	}
 }
 

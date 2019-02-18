@@ -14,7 +14,7 @@ class UserDetaiCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var viewImageView    : UIView!
 	@IBOutlet weak var tittleLabel      : UILabel!
 	@IBOutlet weak var activityLoadPhoto: UIActivityIndicatorView!
-	private var proxy = Proxy(loadObject: PhotoLoad())
+	private var proxy = Proxy(loadObject: PhotoLoad(), cache: CacheManager<UIImage>())
 	
 	public var photo: Photo? {
 		didSet{
