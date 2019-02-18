@@ -8,10 +8,12 @@
 
 import UIKit
 
-class ParseJSON<T: Decodable>: JSONParseble {
+class LoadJSON<T: Decodable>: Session {
 	
-	func parseJSON(url: String, complition: @escaping Clousure<Decodable>) {
-		parse(urlString: url) {(data) in
+	func loadData(urlString: String?, complition: @escaping Clousure<Any> ) {
+		
+		guard let url = urlString else { return }
+		session(urlString: url) {(data) in
 			do{
 				let getUsers = try JSONDecoder().decode([T].self, from: data)
 				DispatchQueue.main.async {
@@ -22,4 +24,5 @@ class ParseJSON<T: Decodable>: JSONParseble {
 			}
 		}
 	}
+	
 }

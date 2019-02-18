@@ -8,27 +8,32 @@
 
 import UIKit
 
-final class Proxy: Proxyble {
+final class Proxy: Session {
 	
-	let loadObject: Proxyble!
+	let loadObject: Session!
+	
 	let cache: CacheManager<UIImage>!
 	
-	func loadImage(urlString: String?, complition: @escaping Clousure<UIImage>) {
-		if let getImage = cache.get(stringKey: urlString) {
+	func loadData(urlString: String?, complition: @escaping Clousure<Any>) {
+
+		if let getImage = cache?.get(stringKey: urlString) {
 			DispatchQueue.main.async {
 				complition(getImage)
 			}
 		} else {
-		loadObject.loadImage(urlString: urlString) { (loadIimage) in
+		loadObject.loadData(urlString: urlString) { [unowned self] (loadData) in
+			if self.cache != nil {
+			self.cache.save(stringKey: urlString, cacheObj: loadData as! UIImage)
+			}
 			DispatchQueue.main.async {
-				complition(loadIimage)
+				complition(loadData)
 			}
 		}
 		}
 	}
 	
-	init(loadObject: Proxyble, cache: CacheManager<UIImage>) {
+	init(loadObject: Session, cache: CacheManager<UIImage>? = nil) {
 		self.loadObject = loadObject
-		self.cache = cache
+	  self.cache = cache
 	}
 }

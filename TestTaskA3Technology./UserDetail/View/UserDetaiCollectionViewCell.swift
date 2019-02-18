@@ -14,13 +14,14 @@ class UserDetaiCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var viewImageView    : UIView!
 	@IBOutlet weak var tittleLabel      : UILabel!
 	@IBOutlet weak var activityLoadPhoto: UIActivityIndicatorView!
-	private var proxy = Proxy(loadObject: PhotoLoad(), cache: CacheManager<UIImage>())
+	
+	private var proxy = Proxy(loadObject: LoadPhoto(), cache: CacheManager<UIImage>())
 	
 	public var photo: Photo? {
 		didSet{
 			tittleLabel.text = photo?.title
-			proxy.loadImage(urlString: photo?.url) {  [unowned self] (image) in
-				self.photoImageView.image = image
+			proxy.loadData(urlString: photo?.url) {  [unowned self] (image) in
+				self.photoImageView.image = image as? UIImage
 				self.activityLoadPhoto.show(on: false)
 			}
 		}
